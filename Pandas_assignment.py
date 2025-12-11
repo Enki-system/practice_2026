@@ -8,13 +8,17 @@ df = pb.create_inventory_df()
 #print(df)
 
 #在庫数が20個より多い商品の抽出
+print(f"\n--- 課題1 ---")
 count = df[df['在庫数']>=20]
 print(count)
 
 #商品を10%値上げして、値上げ価格を新しい列に入れる
+print(f"\n--- 課題2 ---")
 df['値上げ価格'] = df['価格']*1.1
 print(df)
 
+#商品と価格のみの抜粋
+print(f"\n--- 課題3 ---")
 for row in df.itertuples():
     item_name = row.商品名
     item_price = row.価格
